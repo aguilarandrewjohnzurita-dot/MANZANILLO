@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF‑8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halo‑halo Shake – RJ Mazanillo</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #000 url('halo.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #cfdcfc;
+      font-family: 'Courier New', monospace;
+      line-height: 1.6;
+    }
+    .overlay {
+      background: rgba(0,0,0,0.75);
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 30px;
+      background: rgba(10,10,10,0.9);
+      border: 2px solid #1db954;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #1db954, inset 0 0 10px #0a3723;
+    }
+
+    .glitch {
+      position: relative;
+      color: #1db954;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .glitch::before,
+    .glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      opacity: 0.9;
+    }
+    .glitch::before {
+      left: 2px;
+      text-shadow: -2px 0 cyan;
+      animation: glitch‑anim‑a 2.5s infinite linear alternate-reverse;
+    }
+    .glitch::after {
+      left: -2px;
+      text-shadow: -2px 0 magenta;
+      animation: glitch‑anim‑b 3s infinite linear alternate-reverse;
+    }
+    @keyframes glitch‑anim‑a {
+      0% { transform: translate(0,0); }
+      20% { transform: translate(-2px,2px); }
+      40% { transform: translate(-2px,-2px); }
+      60% { transform: translate(2px,2px); }
+      80% { transform: translate(2px,-2px); }
+      100% { transform: translate(0,0); }
+    }
+    @keyframes glitch‑anim‑b {
+      0% { transform: translate(0,0); }
+      25% { transform: translate(2px,-2px); }
+      50% { transform: translate(2px,2px); }
+      75% { transform: translate(-2px,-2px); }
+      100% { transform: translate(0,0); }
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header h1.glitch {
+      font-size: clamp(3.5rem, 6vw, 6rem);
+      color: #1db954;
+      text-shadow: 0 0 20px #1db954, 0 0 40px #1db954;
+    }
+
+    h2.glitch {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      margin-top: 40px;
+      color: #1db954;
+      text-shadow: 0 0 10px #1db954;
+    }
+
+    .card {
+      background: rgba(20,20,20,0.85);
+      border: 1px solid #0f4d3e;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 25px;
+      box-shadow: 0 0 10px #0f4d3e;
+    }
+
+    p, ul {
+      font-size: 1rem;
+      color: #dfecec;
+    }
+    ul { list-style: none; padding-left: 0; }
+    li::before {
+      content: "• ";
+      color: #1db954;
+    }
+
+    figure {
+      text-align: center;
+      margin: 30px 0;
+    }
+    figure img {
+      max-width: 90%;
+      border: 3px solid #1db954;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #1db954;
+      cursor: pointer;
+    }
+    figcaption {
+      margin-top: 8px;
+      font-size: 0.9rem;
+      color: #9edec9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      color: #9edec9;
+      margin-top: 40px;
+      border-top: 1px solid #0f4d3e;
+    }
+
+    /* Lightbox overlay style */
+    #lightbox {
+      position: fixed;
+      top:0; left:0;
+      width:100%; height:100%;
+      background: rgba(0,0,0,0.95);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border: 4px solid #1db954;
+      border-radius: 8px;
+    }
+    #lightbox .close-btn {
+      position: absolute;
+      top: 20px; right: 30px;
+      color: #1db954;
+      font-size: 2rem;
+      cursor: pointer;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <div class="container">
+      <header>
+        <h1 class="glitch" data-text="Halo‑halo">Halo‑halo</h1>
+      </header>
+
+      <main>
+        <section id="recipe">
+          <div class="card">
+            <h2 class="glitch" data-text="Ingredients">Ingredients</h2>
+            <ul>
+              <li>Crushed or shaved ice</li>
+              <li>Sweetened saba bananas, jackfruit (langka), macapuno / nata de coco</li>
+              <li>Sweetened beans or sweetened red beans / garbanzos / munggo</li>
+              <li>Gulaman or jelly cubes (optional)</li>
+              <li>Iced milk or evaporated / chilled milk</li>
+              <li>Ice cream (ube, vanilla, or flavor of choice)</li>
+              <li>Condensed milk or sugar syrup (optional)</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2 class="glitch" data-text="Instructions">Instructions</h2>
+            <ul>
+              <li>Layer sweetened fruits, beans, jelly, macapuno at the bottom of a tall glass.</li>
+              <li>Fill the glass with crushed or shaved ice almost to the top.</li>
+              <li>Pour milk over the ice until it covers some of the layers.</li>
+              <li>Add a scoop (or two) of ice cream on top.</li>
+              <li>Drizzle condensed milk or syrup if you want extra sweetness.</li>
+              <li>Mix all ingredients (“halo‑halo”) before eating — enjoy! 🥤</li>
+            </ul>
+          </div>
+
+          <figure>
+            <img src="halo.jpg" alt="Halo‑halo Shake" id="halo-image">
+            <figcaption>HALO HALO</figcaption>
+          </figure>
+        </section>
+      </main>
+
+      <footer>
+        <p>© 2025 RJ Mazanillo</p>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Lightbox overlay -->
+  <div id="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">✖</span>
+    <img id="lightbox-img" src="" alt="Full image">
+  </div>
+
+  <script>
+    const img = document.getElementById('halo-image');
+    const lightbox = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+
+    img.addEventListener('click', () => {
+      lbImg.src = img.src;
+      lightbox.style.display = 'flex';
+    });
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+    }
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+  </script>
+</body>
+</html>

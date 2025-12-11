@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Story in the Book - Wizard Style</title>
+
+<!-- Harry Potter Font -->
+<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'MedievalSharp', cursive;
+    background: url('hogwarts.jpg') center/cover fixed no-repeat; /* Your wizard BG image */
+    color: #d4af37;
+  }
+
+  /* Magic Glow Animation */
+  @keyframes glow {
+    0% { text-shadow: 0 0 8px #d4af37, 0 0 16px #7a5c00; }
+    50% { text-shadow: 0 0 18px #ffd700, 0 0 32px #b8860b; }
+    100% { text-shadow: 0 0 8px #d4af37, 0 0 16px #7a5c00; }
+  }
+
+  /* NAV BAR */
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: rgba(0,0,0,0.85);
+    border-bottom: 3px solid #d4af37;
+    box-shadow: 0 0 14px #d4af37;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+  }
+
+  nav h2 {
+    color: #ffd700;
+    font-size: 2rem;
+    animation: glow 2s infinite;
+  }
+
+  nav a {
+    color: #ffd700;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 12px;
+    padding: 4px 8px;
+    transition: 0.3s;
+  }
+
+  nav a:hover {
+    color: black;
+    background: #ffd700;
+    border-radius: 4px;
+  }
+
+  /* CONTAINER */
+  .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 130px auto 50px;
+    padding: 30px;
+    background: rgba(0,0,0,0.78);
+    border: 3px solid #d4af37;
+    border-radius: 10px;
+    box-shadow: 0 0 25px #d4af37, inset 0 0 15px #b8860b;
+  }
+
+  h1 {
+    font-size: 3rem;
+    animation: glow 2s infinite;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    text-shadow: 0 0 10px #d4af37;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+
+  /* Profile */
+  .profile-pic {
+    width: 160px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 3px solid #ffd700;
+    box-shadow: 0 0 20px #d4af37;
+  }
+
+  hr {
+    border: 1px solid #d4af37;
+    width: 100%;
+  }
+
+  @media(max-width:900px){
+    .container {
+      flex-direction: column;
+      text-align: center;
+    }
+    .profile-pic {
+      margin-top: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <h2>RJ Manzanillo</h2>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="story.html">Project 1</a>
+    <a href="bangus.html">Project 2</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About Me</a>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+  <div class="text-content">
+    <h1>The Story in the Book</h1>
+    <hr>
+    <h2>Chapter 1</h2>
+    <p>
+      Molly had been staring out of her window for about an hour now. On her desk, lying between the copies of 
+      <i>Nature</i>, <i>New Scientist</i>, and all the other scientific journals her work had appeared in, 
+      was a well-thumbed copy of <cite>On The Road</cite>. It had been Molly's favourite book since college, 
+      and the longer she spent in these four walls, the more she felt she needed to be free.
+    </p>
+    <p>
+      She had spent the last ten years in this room, sitting under a poster with an Oscar Wilde quote proclaiming 
+      that "Work is the refuge of people who have nothing better to do". Although many considered her pioneering work, 
+      unraveling the secrets of the llama <ins>DNA</ins>, to be an outstanding achievement, Molly <i>did</i> think she had something better to do.
+    </p>
+    <p>Submitted by:</p>
+    <p>RJ MANZANILLO</p>
+    <p>BSIT-1F</p>
+  </div>
+
+  <img src="rjpic.jpg" class="profile-pic">
+</div>
+
+</body>
+</html>
